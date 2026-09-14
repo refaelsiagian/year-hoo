@@ -19,8 +19,8 @@ export default function CatalogCard({ product }: CatalogCardProps) {
       </div>
       <div className="w-full text-left space-y-1 flex-grow">
         <div className="text-xs font-bold text-primary uppercase tracking-wider">{product.category}</div>
-        <h3 className="text-lg font-bold text-gray-900 leading-tight">{product.name}</h3>
-        <div className="text-xl font-extrabold text-gray-800 pt-2">Rp {product.price.toLocaleString('id-ID')}</div>
+        <h3 className="text-2xl font-semibold text-gray-900 leading-tight">{product.name}</h3>
+        <div className="text-lg font-bold text-gray-800 pt-2">Rp{product.price.toLocaleString('id-ID')}</div>
       </div>
       <button className="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-primary-dark transition-colors shadow-sm mt-auto text-sm">
         Lihat Detail

@@ -29,7 +29,7 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8 font-medium">
             <Link href="/" className="text-primary transition-colors">Home</Link>
             <Link href="/catalog" className="hover:text-primary transition-colors">Katalog</Link>
-            <Link href="#how-it-works" className="hover:text-primary transition-colors">Cara Pesan</Link>
+            <Link href="/how-it-works" className="hover:text-primary transition-colors">Cara Pesan</Link>
           </nav>
           
           <div className="flex items-center gap-4">
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg py-4 px-4 flex flex-col gap-4 font-medium text-center">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-primary">Home</Link>
             <Link href="/catalog" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-primary">Katalog</Link>
-            <Link href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-primary">Cara Pesan</Link>
+            <Link href="/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-primary">Cara Pesan</Link>
             <Link href="/catalog" onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-white px-6 py-3 rounded-full font-bold shadow-md w-full mt-2">
               Lihat Katalog
             </Link>
@@ -86,7 +86,7 @@ export default function Home() {
               <Link href="/catalog" className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
                 Jelajahi Katalog
               </Link>
-              <Link href="#how-it-works" className="glass px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg text-gray-700 hover:bg-white/60 transition-all text-center">
+              <Link href="/how-it-works" className="glass px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg text-gray-700 hover:bg-white/60 transition-all text-center">
                 Cara Pesan
               </Link>
             </div>
@@ -161,33 +161,29 @@ export default function Home() {
               Tim ilustrator kami siap menggambar karakter impianmu secara eksklusif untuk dicetak di sampul buku harianmu!
             </p>
             <div className="pt-4">
-              <Link href="#how-it-works" className="inline-block bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+              <Link href="/how-it-works" className="inline-block bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                 Tanya Harga Custom
               </Link>
             </div>
           </div>
         </section>
 
-        {/* How it works */}
-        <section id="how-it-works" className="space-y-12">
+        {/* FAQ Section */}
+        <section id="faq" className="space-y-12">
           <div className="text-center space-y-4 px-4">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Cara Memesan (Katalog & Custom)</h2>
-            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">Hanya dengan beberapa langkah mudah untuk mendapatkan jurnal impianmu.</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Pertanyaan yang Sering Diajukan</h2>
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">Masih ragu? Temukan jawaban untuk pertanyaan paling populer di sini.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-2 sm:px-0 mt-8">
+          <div className="max-w-3xl mx-auto space-y-4 px-2 sm:px-0 mt-8">
             {[
-              { step: "1", title: "Pilih / Custom", desc: "Pilih dari katalog, ATAU siapkan referensi karakter untuk custom.", icon: "📓" },
-              { step: "2", title: "Hubungi Admin", desc: "Chat admin kami via WhatsApp atau DM Instagram.", icon: "💬" },
-              { step: "3", title: "Konfirmasi & Bayar", desc: "Admin akan mengkonfirmasi total pesanan dan metode pembayaran.", icon: "💳" },
-              { step: "4", title: "Proses & Kirim", desc: "Buku segera diproses, dicetak premium, dan dikirim ke alamatmu.", icon: "📦" }
+              { q: "Berapa lama proses pembuatan untuk desain custom?", a: "Biasanya memakan waktu 3-5 hari kerja untuk pembuatan sketsa, revisi, dan pencetakan, tergantung kerumitan desain." },
+              { q: "Apakah saya bisa request karakter selain anime?", a: "Tentu! Kami bisa menggambar berbagai gaya karakter mulai dari chibi, maskot, hingga hewan peliharaan." },
+              { q: "Bagaimana cara melakukan pembayaran?", a: "Pembayaran dapat dilakukan melalui transfer bank (BCA, Mandiri, BNI) atau e-wallet (GoPay, OVO, Dana) setelah pesanan dikonfirmasi oleh admin." },
+              { q: "Apakah ada biaya tambahan untuk revisi sketsa?", a: "Setiap pesanan custom mendapatkan gratis 2 kali revisi minor pada tahap sketsa. Revisi lebih dari itu mungkin dikenakan biaya tambahan kecil." }
             ].map((item, idx) => (
-              <div key={idx} className="glass p-6 sm:p-8 rounded-3xl relative flex flex-col items-center text-center space-y-4 hover:-translate-y-2 transition-transform duration-300 mt-6 sm:mt-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-white font-bold flex items-center justify-center absolute -top-5 sm:-top-6 text-lg sm:text-xl shadow-lg">
-                  {item.step}
-                </div>
-                <div className="text-4xl sm:text-5xl pt-4">{item.icon}</div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">{item.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600">{item.desc}</p>
+              <div key={idx} className="glass p-6 sm:p-8 rounded-3xl hover:bg-white/80 transition-colors shadow-sm text-left">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
@@ -206,7 +202,7 @@ export default function Home() {
             <h4 className="font-bold text-gray-900 mb-4">Tautan</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li><Link href="/catalog" className="hover:text-primary">Katalog Produk</Link></li>
-              <li><Link href="#how-it-works" className="hover:text-primary">Cara Pesan</Link></li>
+              <li><Link href="/how-it-works" className="hover:text-primary">Cara Pesan</Link></li>
               <li><Link href="#" className="hover:text-primary">Syarat & Ketentuan</Link></li>
             </ul>
           </div>

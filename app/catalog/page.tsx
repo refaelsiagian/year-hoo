@@ -43,7 +43,7 @@ export default function Catalog() {
           <nav className="hidden md:flex items-center gap-8 font-medium">
             <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <Link href="/catalog" className="text-primary transition-colors">Katalog</Link>
-            <Link href="/#how-it-works" className="hover:text-primary transition-colors">Cara Pesan</Link>
+            <Link href="/how-it-works" className="hover:text-primary transition-colors">Cara Pesan</Link>
           </nav>
           
           <div className="flex items-center gap-4">
@@ -70,7 +70,7 @@ export default function Catalog() {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg py-4 px-4 flex flex-col gap-4 font-medium text-center">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-primary">Home</Link>
             <Link href="/catalog" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-primary">Katalog</Link>
-            <Link href="/#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-primary">Cara Pesan</Link>
+            <Link href="/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-primary">Cara Pesan</Link>
           </div>
         )}
       </header>
