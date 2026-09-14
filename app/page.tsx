@@ -162,7 +162,7 @@ export default function Home() {
             </p>
             <div className="pt-4">
               <Link href="/how-it-works" className="inline-block bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
-                Tanya Harga Custom
+                Lihat Cara Pesan Custom
               </Link>
             </div>
           </div>
@@ -176,10 +176,10 @@ export default function Home() {
           </div>
           <div className="max-w-3xl mx-auto space-y-4 px-2 sm:px-0 mt-8">
             {[
-              { q: "Berapa lama proses pembuatan untuk desain custom?", a: "Biasanya memakan waktu 3-5 hari kerja untuk pembuatan sketsa, revisi, dan pencetakan, tergantung kerumitan desain." },
-              { q: "Apakah saya bisa request karakter selain anime?", a: "Tentu! Kami bisa menggambar berbagai gaya karakter mulai dari chibi, maskot, hingga hewan peliharaan." },
-              { q: "Bagaimana cara melakukan pembayaran?", a: "Pembayaran dapat dilakukan melalui transfer bank (BCA, Mandiri, BNI) atau e-wallet (GoPay, OVO, Dana) setelah pesanan dikonfirmasi oleh admin." },
-              { q: "Apakah ada biaya tambahan untuk revisi sketsa?", a: "Setiap pesanan custom mendapatkan gratis 2 kali revisi minor pada tahap sketsa. Revisi lebih dari itu mungkin dikenakan biaya tambahan kecil." }
+              { q: "Apa itu Year!hoo?", a: "Year!hoo adalah brand alat tulis premium yang berfokus pada buku harian, planner tahunan, dan stiker dengan desain karakter ilustrasi yang imut dan kekinian." },
+              { q: "Apakah buku harian dilengkapi dengan tanggal?", a: "Tergantung tipe bukunya! Untuk tipe 'Yearly Planner', tanggal sudah tercetak lengkap. Sedangkan tipe 'Journal' menggunakan format undated (tanpa tanggal) sehingga bebas diisi kapan saja." },
+              { q: "Bahan kertas apa yang digunakan?", a: "Kami menggunakan kertas HVS 100gsm berkualitas tinggi yang tebal, anti tembus tinta (bleed-proof), dan sangat nyaman untuk ditulis dengan berbagai macam alat tulis." },
+              { q: "Apakah melayani pengiriman ke luar kota/pulau?", a: "Tentu saja! Kami bekerja sama dengan berbagai ekspedisi terpercaya untuk mengirimkan produk Year!hoo dengan aman ke seluruh pelosok Indonesia." }
             ].map((item, idx) => (
               <div key={idx} className="glass p-6 sm:p-8 rounded-3xl hover:bg-white/80 transition-colors shadow-sm text-left">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{item.q}</h3>

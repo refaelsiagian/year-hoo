@@ -94,6 +94,27 @@ export default function HowItWorks() {
           ))}
         </section>
 
+        {/* FAQ Section */}
+        <section id="faq" className="space-y-12 pt-8">
+          <div className="text-center space-y-4 px-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Pertanyaan Seputar Custom</h2>
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">Masih ragu? Temukan jawaban untuk pertanyaan paling populer tentang pesanan custom di sini.</p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4 px-2 sm:px-0 mt-8">
+            {[
+              { q: "Berapa lama proses pembuatan untuk desain custom?", a: "Biasanya memakan waktu 3-5 hari kerja untuk pembuatan sketsa, revisi, dan pencetakan, tergantung kerumitan desain." },
+              { q: "Apakah saya bisa request karakter selain anime?", a: "Tentu! Kami bisa menggambar berbagai gaya karakter mulai dari chibi, maskot, hingga hewan peliharaan." },
+              { q: "Bagaimana cara melakukan pembayaran?", a: "Pembayaran dapat dilakukan melalui transfer bank (BCA, Mandiri, BNI) atau e-wallet (GoPay, OVO, Dana) setelah pesanan dikonfirmasi oleh admin." },
+              { q: "Apakah ada biaya tambahan untuk revisi sketsa?", a: "Setiap pesanan custom mendapatkan gratis 2 kali revisi minor pada tahap sketsa. Revisi lebih dari itu mungkin dikenakan biaya tambahan kecil." }
+            ].map((item, idx) => (
+              <div key={idx} className="glass p-6 sm:p-8 rounded-3xl hover:bg-white/80 transition-colors shadow-sm text-left">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Call to action */}
         <section className="px-2 sm:px-0 pt-8">
           <div className="glass bg-gradient-to-br from-white/60 to-primary/10 border-2 border-primary/20 rounded-[2rem] p-8 sm:p-12 text-center space-y-8 shadow-xl relative overflow-hidden">
