@@ -137,6 +137,7 @@ export default function HowItWorks() {
                 DM Instagram
               </a>
             </div>
+            <p className="text-xs text-gray-500 pt-4">Dengan memesan, Anda menyetujui <Link href="/terms" className="text-primary hover:underline font-medium">Syarat & Ketentuan</Link> Year!hoo.</p>
           </div>
         </section>
       </main>
