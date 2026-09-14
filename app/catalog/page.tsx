@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import CatalogCard from "@/components/CatalogCard";
 
 const products = [
   { id: 1, name: "Sakura Chibi Yearly Planner", category: "Yearly Book", price: 149000 },
@@ -30,7 +31,7 @@ export default function Catalog() {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="flex flex-col min-h-screen text-gray-800">
+    <div className="flex flex-col min-h-screen w-full text-gray-800">
       {/* Navigation */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 shadow-md backdrop-blur-md border-b border-gray-200 py-3" : "glass border-b border-white/20 py-4"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -74,14 +75,14 @@ export default function Catalog() {
         )}
       </header>
 
-      <main className="flex-grow pt-28 sm:pt-32 pb-12 px-4 sm:px-8 max-w-full mx-auto space-y-12">
+      <main className="flex-grow pt-28 sm:pt-32 pb-12 px-4 sm:px-6 w-full max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900">Katalog Produk</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">Temukan buku harian, planner, dan stiker dengan desain karakter kekinian yang siap menemani harimu.</p>
+          <p className="text-gray-600 max-w-2xl mx-auto px-4">Temukan buku harian, planner, dan stiker dengan desain karakter kekinian yang siap menemani harimu.</p>
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 px-4">
           {["All", "Yearly Book", "Journal", "Sticker"].map(cat => (
             <button
               key={cat}
@@ -94,24 +95,10 @@ export default function Catalog() {
         </div>
 
         {/* Product Grid */}
-        <div className="w-full px-2 sm:px-12 lg:px-24">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 w-full">
-            {filteredProducts.map(product => (
-              <div key={product.id} className="glass p-6 rounded-3xl flex flex-col items-center text-center space-y-4 hover:-translate-y-2 transition-transform duration-300 shadow-md w-full">
-                <div className="w-full aspect-square bg-white/50 rounded-2xl flex items-center justify-center p-8">
-                   <Image src="/logo-2.svg" alt={product.name} width={80} height={80} className="opacity-70 object-contain" />
-                </div>
-                <div className="w-full text-left space-y-1">
-                  <div className="text-xs font-bold text-primary uppercase tracking-wider">{product.category}</div>
-                  <h3 className="text-lg font-bold text-gray-900 leading-tight">{product.name}</h3>
-                  <div className="text-xl font-extrabold text-gray-800 pt-2">Rp {product.price.toLocaleString('id-ID')}</div>
-                </div>
-                <button className="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-primary-dark transition-colors shadow-sm mt-auto">
-                  Lihat Detail
-                </button>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 pt-8 w-full">
+          {filteredProducts.map(product => (
+            <CatalogCard key={product.id} product={product} />
+          ))}
         </div>
       </main>
       
