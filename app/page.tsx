@@ -21,8 +21,8 @@ export default function Home() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 shadow-md backdrop-blur-md border-b border-gray-200 py-3" : "glass border-b border-white/20 py-4"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo-2.svg" alt="Year!hoo Icon" width={40} height={40} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
-            <Image src="/logo-1.svg" alt="Year!hoo Text" width={120} height={40} className="object-contain hidden sm:block" style={{ width: 'auto', height: 'auto' }} />
+            <Image src="/logo-2.svg" alt="Year!hoo Icon" width={40} height={40} className="object-contain" />
+            <Image src="/logo-1.svg" alt="Year!hoo Text" width={140} height={40} className="object-contain hidden sm:block" />
           </Link>
           
           {/* Desktop Nav */}
@@ -135,7 +135,7 @@ export default function Home() {
             ].map(product => (
               <div key={product.id} className="glass p-6 rounded-3xl flex flex-col items-center text-center space-y-4 hover:-translate-y-2 transition-transform duration-300 shadow-md">
                 <div className="w-full aspect-square bg-white/50 rounded-2xl flex items-center justify-center p-8">
-                  <Image src="/logo-2.svg" alt={product.name} width={80} height={80} className="opacity-70 object-contain" style={{ width: 'auto', height: 'auto' }} />
+                  <Image src="/logo-2.svg" alt={product.name} width={80} height={80} className="opacity-70 object-contain" />
                 </div>
                 <div className="w-full text-left space-y-1">
                   <div className="text-xs font-bold text-primary uppercase tracking-wider">{product.category}</div>
@@ -199,7 +199,7 @@ export default function Home() {
       <footer className="glass border-t border-white/20 mt-16 sm:mt-24 py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center sm:text-left">
           <div className="space-y-4 flex flex-col items-center sm:items-start">
-            <Image src="/logo-1.svg" alt="Year!hoo Text" width={150} height={50} style={{ width: '150px', height: 'auto' }} />
+            <Image src="/logo-1.svg" alt="Year!hoo Text" width={150} height={48} className="object-contain" />
             <p className="text-sm sm:text-base text-gray-600 max-w-xs">Bikin hari-harimu makin berwarna dengan jurnal karakter eksklusif dari Year!hoo.</p>
           </div>
           <div>

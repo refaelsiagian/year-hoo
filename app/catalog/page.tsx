@@ -35,8 +35,8 @@ export default function Catalog() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 shadow-md backdrop-blur-md border-b border-gray-200 py-3" : "glass border-b border-white/20 py-4"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo-2.svg" alt="Year!hoo Icon" width={40} height={40} className="object-contain" style={{ width: 'auto', height: '40px' }} />
-            <Image src="/logo-1.svg" alt="Year!hoo Text" width={120} height={40} className="object-contain hidden sm:block" style={{ width: 'auto', height: '32px' }} />
+            <Image src="/logo-2.svg" alt="Year!hoo Icon" width={40} height={40} className="object-contain" />
+            <Image src="/logo-1.svg" alt="Year!hoo Text" width={140} height={40} className="object-contain hidden sm:block" />
           </Link>
           
           <nav className="hidden md:flex items-center gap-8 font-medium">
@@ -99,7 +99,7 @@ export default function Catalog() {
             {filteredProducts.map(product => (
               <div key={product.id} className="glass p-6 rounded-3xl flex flex-col items-center text-center space-y-4 hover:-translate-y-2 transition-transform duration-300 shadow-md w-full">
                 <div className="w-full aspect-square bg-white/50 rounded-2xl flex items-center justify-center p-8">
-                   <Image src="/logo-2.svg" alt={product.name} width={80} height={80} className="opacity-70 object-contain" style={{ width: 'auto', height: 'auto' }} />
+                   <Image src="/logo-2.svg" alt={product.name} width={80} height={80} className="opacity-70 object-contain" />
                 </div>
                 <div className="w-full text-left space-y-1">
                   <div className="text-xs font-bold text-primary uppercase tracking-wider">{product.category}</div>
