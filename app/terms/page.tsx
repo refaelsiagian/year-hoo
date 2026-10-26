@@ -77,12 +77,12 @@ export default function Terms() {
             <section className="space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center text-lg">🎨</span>
-                Kebijakan Pemesanan Custom
+                Kebijakan Pemesanan Custom Digital
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-relaxed text-sm sm:text-base">
                 <li><strong>Hak Menolak:</strong> Year!hoo berhak menolak pesanan custom apabila referensi yang diberikan mengandung unsur yang tidak pantas (SARA, NSFW, dll) atau dirasa di luar batas kemampuan/art style ilustrator kami.</li>
-                <li><strong>Batas Revisi:</strong> Pemesan berhak mendapatkan maksimal <strong>2 kali revisi minor</strong> (perbaikan kecil) hanya pada tahap sketsa awal.</li>
-                <li><strong>Revisi Tambahan:</strong> Permintaan revisi major (rombak total) atau revisi setelah sketsa masuk ke tahap pewarnaan (lineart/coloring) akan dikenakan biaya tambahan.</li>
+                <li><strong>Batas Revisi:</strong> Pemesan berhak mendapatkan maksimal <strong>2 kali revisi minor</strong> (perbaikan kecil) hanya pada tahap sketsa awal sebelum proses pewarnaan (coloring).</li>
+                <li><strong>Revisi Tambahan:</strong> Permintaan revisi major (rombak total) atau revisi setelah masuk tahap pewarnaan digital final akan dikenakan biaya tambahan.</li>
               </ul>
             </section>
             
@@ -91,11 +91,11 @@ export default function Terms() {
             <section className="space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-full bg-green-500/10 text-green-600 flex items-center justify-center text-lg">💳</span>
-                Pembayaran & Pembatalan
+                Pembayaran & Kebijakan No Refund
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-relaxed text-sm sm:text-base">
-                <li><strong>Sistem Pembayaran:</strong> Pesanan custom baru akan mulai diproses ke tahap pengerjaan sketsa setelah pembayaran diterima secara lunas sesuai nominal yang disepakati bersama admin.</li>
-                <li><strong>Pembatalan (No Refund):</strong> Pesanan yang sudah disetujui desainnya dan masuk ke tahap pencetakan <strong>tidak dapat dibatalkan</strong>, dan uang tidak dapat dikembalikan dengan alasan apapun.</li>
+                <li><strong>Sistem Pembayaran:</strong> Link unduhan file digital katalog atau pengerjaan pesanan custom akan diproses setelah pembayaran diterima secara lunas sesuai nominal yang disepakati bersama admin.</li>
+                <li><strong>Tidak Ada Pengembalian Dana (No Refund):</strong> Karena seluruh produk berbentuk file digital yang langsung dapat diakses dan diunduh, seluruh transaksi yang telah selesai <strong>bersifat final dan tidak dapat dibatalkan atau dikembalikan dana</strong> dengan alasan apa pun.</li>
               </ul>
             </section>
 
@@ -103,13 +103,14 @@ export default function Terms() {
 
             <section className="space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-3">
-                <span className="w-10 h-10 rounded-full bg-orange-400/10 text-orange-500 flex items-center justify-center text-lg">📦</span>
-                Pengiriman & Retur Barang
+                <span className="w-10 h-10 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center text-lg">📥</span>
+                Pengiriman Digital & Cetak Mandiri
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-relaxed text-sm sm:text-base">
-                <li><strong>Tanggung Jawab Ekspedisi:</strong> Keterlambatan atau kerusakan yang disebabkan oleh proses transit pada pihak ekspedisi berada di luar kendali dan tanggung jawab Year!hoo. Kami akan memastikan packing aman (bubble wrap/kardus).</li>
-                <li><strong>Syarat Klaim Garansi/Retur:</strong> Jika ada cacat produksi dari pihak kami (misal halaman terbalik, jilidan lepas, atau cacat cetak parah), klaim retur WAJIB menyertakan <strong>Video Unboxing</strong> dari awal paket utuh dibuka tanpa jeda atau potongan (cut).</li>
-                <li><strong>Batas Waktu Klaim:</strong> Maksimal klaim cacat produksi adalah 2x24 jam sejak resi menunjukkan status paket telah diterima.</li>
+                <li><strong>100% Produk Digital:</strong> Seluruh produk Year!hoo berupa file digital (PDF High-Res, PNG). Year!hoo <strong>tidak menjual produk dalam bentuk fisik dan tidak melakukan pengiriman barang fisik via kurir/ekspedisi</strong>.</li>
+                <li><strong>Metode Pengiriman File:</strong> Link akses unduhan file digital resmi akan dikirimkan melalui WhatsApp atau email pembeli setelah bukti pembayaran terverifikasi.</li>
+                <li><strong>Hak Cetak Mandiri (Self-Printing):</strong> Pembeli memiliki hak penuh untuk mencetak file digital yang telah dibeli secara mandiri (menggunakan printer pribadi di rumah atau melalui jasa percetakan pihak ketiga) untuk keperluan pemakaian pribadi.</li>
+                <li><strong>Garansi File Rusak:</strong> Jika pembeli mengalami kendala link kedaluwarsa, file corrupt, atau file tidak dapat dibuka, admin Year!hoo siap mengirimkan ulang link unduhan file yang valid tanpa biaya tambahan dalam kurun waktu 30 hari sejak transaksi.</li>
               </ul>
             </section>
 
@@ -118,10 +119,10 @@ export default function Terms() {
             <section className="space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-full bg-purple-500/10 text-purple-600 flex items-center justify-center text-lg">©️</span>
-                Hak Cipta (Copyright)
+                Hak Cipta & Lisensi Penggunaan
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-relaxed text-sm sm:text-base">
-                <li><strong>Penggunaan Pribadi:</strong> Seluruh ilustrasi custom yang kami buat adalah untuk penggunaan pribadi klien (dicetak di buku Year!hoo). Klien <strong>tidak diperkenankan</strong> mencetak ulang secara massal, menjual kembali desainnya, atau menggunakannya untuk keperluan komersial tanpa lisensi tertulis dari kami.</li>
+                <li><strong>Penggunaan Pribadi (Personal Use Only):</strong> Seluruh karya ilustrasi dan file digital Year!hoo hanya dilisensikan untuk pemakaian pribadi pembeli. Pembeli <strong>dilarang keras</strong> menjual kembali file digital, membagikan link unduhan ke publik/pihak lain, atau mencetak dalam skala massal untuk tujuan komersial tanpa izin tertulis dari Year!hoo.</li>
                 <li><strong>Hak Portofolio:</strong> Kami berhak menggunakan dan mempublikasikan hasil karya ilustrasi custom di media sosial, website, atau katalog Year!hoo sebagai portofolio (kecuali klien secara eksplisit meminta hasil karyanya untuk dirahasiakan).</li>
               </ul>
             </section>

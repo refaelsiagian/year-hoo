@@ -1,22 +1,19 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import CatalogCard from "@/components/CatalogCard";
+import { products } from "@/lib/products";
 
-const products = [
-  { id: 1, name: "Sakura Chibi Yearly Planner", category: "Yearly Book", price: 149000 },
-  { id: 2, name: "Midnight Owl Journal", category: "Journal", price: 89000 },
-  { id: 3, name: "Cute Mascot Sticker Pack", category: "Sticker", price: 15000 },
-  { id: 4, name: "Summer Vibes Planner 2027", category: "Yearly Book", price: 159000 },
-  { id: 5, name: "Minimalist Anime Notes", category: "Journal", price: 79000 },
-  { id: 6, name: "Holo Chibi Face Stickers", category: "Sticker", price: 20000 },
-];
-
-export default function Catalog() {
+function CatalogContent() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("All");
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const activeCategory = selectedCategory ?? (categoryParam || "All");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +51,7 @@ export default function Catalog() {
             <button 
               className="md:hidden p-2 text-gray-600 hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle Menu"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                 {isMobileMenuOpen ? (
@@ -77,16 +75,16 @@ export default function Catalog() {
 
       <main className="flex-grow pt-28 sm:pt-32 pb-12 px-4 sm:px-6 w-full max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900">Katalog Produk</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto px-4">Temukan buku harian, planner, dan stiker dengan desain karakter kekinian yang siap menemani harimu.</p>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900">Katalog Produk Digital</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto px-4">Pilihan planner, jurnal, kalender, dan stiker digital siap unduh instan. Praktis dipakai di tablet/iPad atau dicetak sendiri kapan saja!</p>
         </div>
 
         {/* Categories */}
         <div className="flex flex-wrap justify-center gap-4 px-4">
-          {["All", "Yearly Book", "Journal", "Sticker"].map(cat => (
+          {["All", "Yearly Book", "Journal", "Kalender", "Sticker"].map(cat => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => setSelectedCategory(cat)}
               className={`px-6 py-2 rounded-full font-bold transition-all ${activeCategory === cat ? 'bg-primary text-white shadow-md' : 'glass text-gray-600 hover:bg-white/60'}`}
             >
               {cat}
@@ -109,5 +107,13 @@ export default function Catalog() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function Catalog() {
+  return (
+    <Suspense fallback={<div className="flex flex-col min-h-screen w-full items-center justify-center text-primary font-bold">Memuat katalog...</div>}>
+      <CatalogContent />
+    </Suspense>
   );
 }

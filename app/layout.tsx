@@ -8,8 +8,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Year!hoo | Jurnal Tahunan Karakter Spesialmu",
-  description: "Pesan buku harian tahunan dan planner dengan desain karakter anime/chibi custom sesuai keinginanmu!",
+  title: "Year!hoo | Planner & Jurnal Digital Siap Cetak (Printable)",
+  description: "Unduh planner tahunan, jurnal, kalender, dan stiker digital siap cetak (printable) dengan karakter ilustrasi imut. Download instan, bebas ongkir, bisa dicetak sendiri!",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
